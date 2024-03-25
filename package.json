@@ -4,21 +4,21 @@
     "electron-updater": "^6.1.8"
   },
   "name": "tool-management",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tool_Management",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
     "dev:watch": "npx electronmon --trace-warnings .",
-    "build": "electron-builder"
+    "package": "electron-builder -p always"
   },
   "build": {
     "publish": [
       {
         "provider": "github",
-        "owner": "20nikhil02",
-        "repo": "electron-updater-example"
+        "owner": "20Nikhil02",
+        "repo": "Electron-Calci"
       }
     ]
   },

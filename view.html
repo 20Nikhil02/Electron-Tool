@@ -31,17 +31,9 @@
             <a class="nav-link" id="user_id_login-home">Home</a>
           </li>
 
-          <div id="unauthorized" class="hidden ">
-            <li class="nav-item">
-              <a class="nav-link" id="user_id_login-form">Add</a>
-            </li>
-          </div>
-
-          <div id="authorized" class="hidden ">
-            <li class="nav-item">
-              <a class="nav-link visibility " id="user_id_login-form">Add</a>
-            </li>
-          </div>
+          <li class="nav-item">
+            <a class="nav-link visibility hidden" id="user_id_login-form">Add</a>
+        </li>
 
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" id="user_id_login-view">View</a>
@@ -302,13 +294,14 @@
     }
 
 
-    var authorizedDiv = document.getElementById("authorized");
-    var unauthorizedDiv = document.getElementById("unauthorized");
+    var authorizedDiv = document.getElementById("user_id_login-form");
 
 
     if (check_superusers(login_username)) {
-      authorizedDiv.classList.remove("hidden");
-      unauthorizedDiv.classList.add("hidden");
+        authorizedDiv.classList.remove("hidden");
+    }
+     else {
+         authorizedDiv.classList.add("hidden");
     }
 
   </script>
